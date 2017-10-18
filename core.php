@@ -1,8 +1,8 @@
 <?php
 
-define("DBUSER",     "root");
-define("DBPASSWORD",    "cryptex17");
-define("REDIRECTLINK", "http://cryptex2017.ml/index.php");
-define("LOGINLINK","http://cryptex2017.ml/vide/examples/fb.php");
+define("DBUSER",     "himanshu");
+define("DBPASSWORD",    "cryptex2018");
+define("REDIRECTLINK", "localhost:5000");
+define("LOGINLINK","localhost:5000");
 
 ?>

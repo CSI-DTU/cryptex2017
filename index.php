@@ -6,7 +6,7 @@ require("functions.php");
 
 if (!isset($_SESSION["access_token"])) {
   //add_user();
-  header('Location: http://cryptex2017.ml/vide/examples/fb.php');
+  header('localhost:5000');
 }
 
 if (!isset($_SESSION["email"])){
@@ -56,7 +56,7 @@ if (!isset($_SESSION["email"])){
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex2017.ml/index.php">Home</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://localhost:5000/index.php">Home</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/cryptex2017/app/202980683107053/">Forum</a>
 
 
