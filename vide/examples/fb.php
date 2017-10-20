@@ -134,7 +134,7 @@ include  dirname(dirname(dirname(__FILE__))).'/fbcode.php' ;
 
     //  header('Location: http://www.google.com');
 //add_user();
-      header('Location: http://localhost:5000/index.php');
+      header('Location: '.REDIRECTLINK);
 
 
      }

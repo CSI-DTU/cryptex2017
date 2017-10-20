@@ -23,8 +23,8 @@
 
 
                     <div class="mdl-mega-footer--bottom-section">
-                      <a class="android-link mdl-typography--font-light" target="_blank" href="http://localhost:5000/index.php">Visit CSI DTU Site</a>
-                      <a class="android-link mdl-typography--font-light" target="_blank" href="http://cogenesis.dtu.ac.in/">Visit Cogenesis Site</a>
+                      <a class="android-link mdl-typography--font-light" target="_blank" href=<?php echo DTUSITE ;?>>Visit CSI DTU Site</a>
+                      <a class="android-link mdl-typography--font-light" target="_blank" href=<?php echo COGENESISSITE; ?> >Visit Cogenesis Site</a>
                       <a class="android-link mdl-typography--font-light" href="webteam.php">View Team</a>
                     
                     </div>

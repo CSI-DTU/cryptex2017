@@ -56,7 +56,7 @@
         if(response.status==='connected')
         { console.log('i am after login connected');
              console.log(JSON.stringify(response));
-           window.location.href = "http://localhost:5000/index.php";
+           window.location.href = <?php echo json_encode(REDIRECTLINK); ?>;
           }
         else
           {//console.log('i am not connected');
@@ -69,7 +69,7 @@
 
     window.fbAsyncInit = function() {
     FB.init({
-      appId      :  '229860874129208',//'964170843665207',//,
+      appId      : <?php echo json_encode($app_id) ;?>,//'964170843665207',//,
       cookie     : true,  // enable cookies to allow the server to access
                           // the session
       xfbml      : true,  // parse social plugins on this page
@@ -94,7 +94,7 @@
        if(response.status==='connected')
         { //console.log('i am connected');
 
-           window.location.href = "http://localhost:5000/index.php";
+           window.location.href = <?php echo json_encode(REDIRECTLINK); ?>;
 
         }
         else

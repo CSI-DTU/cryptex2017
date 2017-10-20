@@ -1,7 +1,7 @@
 <?php
 
-    $app_id = "229860874129208";
-    $app_secret = "e18f62af2318d63531829e88a593d017";
+    $app_id = "565461693784792";
+    $app_secret = "c89075376defb090dd796342027a614f";
    $my_url = "https://apps.facebook.com/quiztest__harsh
 ";
 

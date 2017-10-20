@@ -43,8 +43,8 @@ error_reporting(0);
           <!-- Navigation -->
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://localhost:5000/index.php">Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/cryptex2017/app/202980683107053">Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK; ?> >Home</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >Forum</a>
 
 
             </nav>
@@ -109,7 +109,7 @@ error_reporting(0);
           Note that each lifeline can be used ONLY ONCE...so use wisely..!</br>
 
           Hints will be available in the <u>
-          <a href="https://www.facebook.com/cryptex2017/app/202980683107053" target="_blank">Discussion Forum</a></u>
+          <a href=<?php echo APPLINK; ?> target="_blank">Discussion Forum</a></u>
           on a timely basis from the mods. <br>Users can also post the hints for others to keep the game
           going but anyone disclosing the answer will be <font color = "red">disqualified</font>
           from the game.
