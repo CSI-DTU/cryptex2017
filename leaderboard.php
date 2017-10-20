@@ -56,7 +56,7 @@ $i=1;
                   <div class="android-navigation-container">
                     <nav class="android-navigation mdl-navigation">
                       <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex.csidtu.co.in/index.php">Home</a>
-                      <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href="https://www.facebook.com/phoenix.cryptex/app/202980683107053/">Forum</a>
+                      <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >Forum</a>
 
 
                     </nav>

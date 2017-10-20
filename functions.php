@@ -165,7 +165,7 @@ function scheckaccesstoken(){
 	if(!(file_get_contents($graph_url))){
 		session_destroy();
 
-		header('Location: '."https://localhost:5000/vide/examples/fb.php");
+		header('Location: '.LOGINLINK);
 
 		};
 	     // echo $user->picture->data->url;
@@ -425,7 +425,7 @@ mysqli_query($link,$sql_query);
 }
 function connect()
 {
-	$link = mysqli_connect("db4free.net:3307", "himanshu", "himanshu", "cryptex2018");
+	$link = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBNAME);
 	if($link === false){
 	    die("ERRROR: Could not connect. " . mysqli_connect_error());
 	}
@@ -462,7 +462,7 @@ $fb_id = $user->id;
 	//echo $sql;
 $result  = mysqli_query($link,$sql);
 //print_r($result);
-if($result!=0){
+if($result){
 	//return 1;
  //print_r("successfully executed");
 }
@@ -484,7 +484,7 @@ else{
 
 }
 
- if($result==0)
+ if(!$result)
 {
 	$sql_query="insert into register (username,fb_id,email,profilepic)
  values ('$username','$fb_id','$email','$profilepic')";
