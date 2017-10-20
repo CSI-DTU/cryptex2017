@@ -6,7 +6,7 @@ ob_start();
 
 if (!isset($_SESSION["access_token"])) {
 
-  header('Location: http://cryptex2017.ml/vide/examples/fb.php');
+  header('Location: http://localhost:5000/vide/examples/fb.php');
 }
 
 
@@ -23,10 +23,10 @@ print_r($answer);
 if (checkans($answer,getlevel($_SESSION["fb_id"]))) {
 //flush();
      updateUser($_SESSION["fb_id"]);
-     header('Location: http://cryptex2017.ml/index.php');
+     header('Location: http://localhost:5000/index.php');
 }
 else{
 //flush();
-    header('Location: http://cryptex2017.ml/index.php?msg=2');
+    header('Location: http://localhost:5000/index.php?msg=2');
 }
 ?>

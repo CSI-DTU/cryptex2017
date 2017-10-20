@@ -134,7 +134,7 @@ include  dirname(dirname(dirname(__FILE__))).'/fbcode.php' ;
 
     //  header('Location: http://www.google.com');
 //add_user();
-      header('Location: http://cryptex2017.ml/index.php');
+      header('Location: http://localhost:5000/index.php');
 
 
      }

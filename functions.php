@@ -165,7 +165,7 @@ function scheckaccesstoken(){
 	if(!(file_get_contents($graph_url))){
 		session_destroy();
 
-		header('Location: '."https://cryptex2017.ml/vide/examples/fb.php");
+		header('Location: '."https://localhost:5000/vide/examples/fb.php");
 
 		};
 	     // echo $user->picture->data->url;
@@ -425,12 +425,13 @@ mysqli_query($link,$sql_query);
 }
 function connect()
 {
-	$link = mysqli_connect("localhost", "root", "cryptex17", "cryptex17");
+	$link = mysqli_connect("db4free.net:3307", "himanshu", "himanshu", "cryptex2018");
 	if($link === false){
 	    die("ERRROR: Could not connect. " . mysqli_connect_error());
 	}
 return $link;
 }
+
 function add_user(){
 //mysqli_select_db("cryptextest",$link);
 $link=connect();
