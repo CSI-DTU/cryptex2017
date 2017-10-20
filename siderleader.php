@@ -21,8 +21,15 @@
         <nav class="mdl-navigation">
           <a class="mdl-navigation__link" href="index.php">Home</a>
           <a class="mdl-navigation__link" href="leaderboard.php">LeaderBoard</a>
-          <a class="mdl-navigation__link" href="leaderboard.php">Your Rank:   <?php $var_value = $_SESSION['varname'];
- echo $var_value; ?></a>
+          <a class="mdl-navigation__link" href="leaderboard.php">Your Rank:   
+            <?php 
+              if(isset($_SESSION['varname']))
+                $var_value = $_SESSION['varname'];
+              else
+                $var_value = "";
+              echo $var_value; 
+            ?>
+            </a>
           <a class="mdl-navigation__link" href="rules.php">Rules</a>
 
 

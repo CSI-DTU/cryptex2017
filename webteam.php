@@ -1,11 +1,12 @@
 <?php
+include 'core.php';
 session_start();
 
 error_reporting(0);
 require("functions.php");
 
 if (!isset($_SESSION["email"])) {
-  header('Location: http://localhost:5000/vide/examples/fb.php ');
+  header('Location: '.LOGINLINK);
 }
 else{
   //scheckaccesstoken();
@@ -82,7 +83,7 @@ if (!isset($_SESSION["email"])) {
                               <div class="demo-card-image1 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--10-col-phone">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
-                                  <span class="demo-card-image__filename">Harsh Kumar</span>
+                                  <span class="demo-card-image__filename">Prince Piyush</span>
                                 </div>
                               </div>
 
@@ -91,14 +92,14 @@ if (!isset($_SESSION["email"])) {
                       </div>
 
 
-                          <div class="android-customized-section-text">
+                      <!--     <div class="android-customized-section-text">
                               <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Content Team</div>
                                <h5 style="text-align: center;">Kushagra Jain</h5>
                               <h5 style="text-align: center;">Sachin Kadyan</h5>
                               <h5 style="text-align: center;">Shubham Jana</h5>
 
                           </div>
-
+ -->
 
 
 
