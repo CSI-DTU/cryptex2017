@@ -87,7 +87,7 @@ if (!isset($_SESSION["email"])){
               data=JSON.stringify(data);
 
                 if(data === c  ){
-                    $.post( "../zqgetlifeline.php", { name: levelname } ,
+                    $.post( "zqgetlifeline.php", { name: levelname } ,
                     function( data ) {
                       console.log(data);
                         //  $("#reshu").html=data;

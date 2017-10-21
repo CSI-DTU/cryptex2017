@@ -5,7 +5,7 @@ require_once("functions.php");
 
 if (!isset($_SESSION["access_token"])) {
 
-  header('Location: http://localhost:5000/vide/examples/fb.php');
+  header('Location: '.LOGINLINK);
 }
 
 
@@ -55,7 +55,7 @@ $i=1;
                   <!-- Navigation -->
                   <div class="android-navigation-container">
                     <nav class="android-navigation mdl-navigation">
-                      <a class="mdl-navigation__link mdl-typography--text-uppercase" href="http://cryptex.csidtu.co.in/index.php">Home</a>
+                      <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK;?>>Home</a>
                       <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >Forum</a>
 
 
