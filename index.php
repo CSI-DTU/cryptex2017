@@ -4,8 +4,18 @@ include("core.php");
 error_reporting(0);
 require("functions.php");
 
-if (!isset($_SESSION["access_token"])) {
+if (!isset($_SESSION["access_token"]) && !logged_in()) {
   //add_user();
+  header('Location: '.LOGINLINK);
+}
+if (empty($_SESSION['access_token'])) {
+  header('Location: '.LOGINLINK);
+}
+
+if (!isset($_SESSION['fb_id'])) {
+  header('Location: '.LOGINLINK);
+}
+if (empty($_SESSION['fb_id'])) {
   header('Location: '.LOGINLINK);
 }
 
@@ -24,6 +34,8 @@ if (!isset($_SESSION["email"])){
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Cryptex online quizzing game">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,6 +48,15 @@ if (!isset($_SESSION["email"])){
     <link rel="stylesheet" href="css/material.css">
     <link rel="stylesheet" href="css/styles.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <!-- Open Graph Data -->
+    <meta property="og:title" content="Cryptex 2017"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://cryptex.ml/"/>
+    <meta property="og:image" content="static/images/cryptex-small.png"/>
+    <meta property="og:site_name" content="Cryptex 2017"/>
+    <meta property="og:description" content="Play a game thinking!"/>
+    <meta property="fb:app_id" content="565461693784792"/>
+
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout  mdl-layout--fixed-drawer mdl-layout--fixed-header">
