@@ -136,6 +136,7 @@ if(mysqli_query($link, $sql_query)){
 //echo "Successful";
 }
 else{
+
  echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
 
 }
@@ -409,6 +410,7 @@ if($result){
 // print_r("successfully executed");
 }
 else{
+	//header("Location: ",LOGINLIINK);
  echo "ERROR: Could not able to execute $sql_query. " . mysqli_error($link);
 
 }

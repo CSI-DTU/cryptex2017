@@ -3,6 +3,14 @@ session_start();
 error_reporting(0);
 include  dirname(dirname(dirname(__FILE__))).'/functions.php' ;
 include  dirname(dirname(dirname(__FILE__))).'/fbapi.php' ;
+<?php
+  
+if (isset($_SESSION['access_token']) && isset($_SESSION['userID']) 
+    && !empty($_SESSION['access_token']) && !empty($_SESSION['userID'])) {
+  header("Location: ",REDIRECTLINK);
+}
+
+
 
 ?>
 <!DOCTYPE html>

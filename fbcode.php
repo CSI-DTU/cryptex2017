@@ -1,3 +1,13 @@
+<?php
+  
+if (isset($_SESSION['access_token']) && isset($_SESSION['userID']) 
+    && !empty($_SESSION['access_token']) && !empty($_SESSION['userID'])) {
+  header("Location: ",REDIRECTLINK);
+}
+
+?>
+
+
 <div>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>
