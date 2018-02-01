@@ -8,10 +8,6 @@ if (!isset($_SESSION["access_token"]) && !logged_in()) {
   //add_user();
   header('Location: '.LOGINLINK);
 }
-if (empty($_SESSION['access_token'])) {
-  header('Location: '.LOGINLINK);
-}
-
 if (!isset($_SESSION['fb_id'])) {
   header('Location: '.LOGINLINK);
 }
@@ -48,15 +44,14 @@ if (!isset($_SESSION["email"])){
     <link rel="stylesheet" href="css/material.css">
     <link rel="stylesheet" href="css/styles.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <!-- Open Graph Data -->
-    <meta property="og:title" content="Cryptex 2018"/>
+     <!-- Open Graph Data -->
+    <meta property="og:title" content="Cryptex 2017"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content=<?php echo REDIRECTLINK; ?>/>
-    <meta property="og:image" content="static/images/cryptex-small.png"/>
-    <meta property="og:site_name" content="Cryptex 2018"/>
-    <meta property="og:description" content="Play a game thinking!"/>
+    <meta property="og:url" content="http://cryptex.ml"/>
+    <meta property="og:image" content="https://i.ytimg.com/vi/M9a6pmK-0EY/maxresdefault.jpg"/>
+    <meta property="og:site_name" content="Cryptex 2017"/>
+    <meta property="og:description" content="Play a game of thinking!"/>
     <meta property="fb:app_id" content="565461693784792"/>
-
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout  mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -221,8 +216,6 @@ if (isset($_SESSION["fb_id"]) && !empty($_SESSION["fb_id"])) {
 
     $row=mysqli_fetch_array($questionData,MYSQLI_BOTH);
 //print_r($row);
-}else{
-  header("Location: ",LOGONLINK);
 }
 
 ?>
