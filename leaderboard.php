@@ -110,7 +110,7 @@ $i=1;
                          //$row2=mysqli_fetch_array($r2,MYSQLI_BOTH);
                         // print_r($row2);
                          while($row2=mysqli_fetch_row($r2))
-                         {
+                         {  if (empty($row2[0])) continue;
                            if($row2['1']==60) continue;
                            ?>
                            <tr>
