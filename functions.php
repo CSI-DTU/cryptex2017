@@ -80,8 +80,8 @@ function levelskip(){
 
 		}
 /*
-		$r=mysql_query($sql_query);
-		$row=mysql_fetch_array($r);
+		$r=mysqli_query($sql_query);
+		$row=mysqli_fetch_array($r);
 		*/
 		$q=$row["level"];
 		$w=$q+1;
@@ -141,12 +141,12 @@ else{
 
 }
 
-//while($row = mysqli_fetch_array($r, MYSQL_ASSOC)) {
+//while($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 //print_r($row);
 //}
 	return $r;
 
-// while($row=mysql_fetch_array($r))
+// while($row=mysqli_fetch_array($r))
 
 // {
 
@@ -181,9 +181,9 @@ function scheckaccesstoken(){
 
        //{
 
-          //$con = mysql_connect("166.62.6.102 ","cryptexmod","CSImod2016");
+          //$con = mysqli_connect("166.62.6.102 ","cryptexmod","CSImod2016");
 //print_r("HELLO");
-       	//	$con = mysql_connect("localhost","DBUSER","DBPASSWORD");
+       	//	$con = mysqli_connect("localhost","DBUSER","DBPASSWORD");
 			//	$con = mysqli_connect("localhost", "root", "");
 			//	if($con === false){
 			//	    die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -195,7 +195,7 @@ function scheckaccesstoken(){
          {
 
           echo "Error: Could not connect to database. Please try again later.";
-          echo mysql_error($con);
+          echo mysqli_error($con);
 
           exit;
 
@@ -239,7 +239,7 @@ if (!preg_match("/^[0-9]{8,10}/i", $phone))
 
 		echo "<select name='user'> ";
 
-		while($row=mysql_fetch_array($r))
+		while($row=mysqli_fetch_array($r))
 
 		{
 
@@ -266,15 +266,15 @@ $_SESSION['username'] = $username;
 }
 
 $query2 = "select username from register where fb_id = '".$username."'";
-$result2 =mysql_query($query2);
-if($row2 = mysql_fetch_array($result2))
+$result2 =mysqli_query($query2);
+if($row2 = mysqli_fetch_array($result2))
 	$username = $row2['username'];
 
 	$sql_query="SELECT count(*) FROM  activity_log WHERE username='".$username."' and status = 0 and levelplayed = '".$level."'";
 
-	$r=mysql_query($sql_query);
+	$r=mysqli_query($sql_query);
 
-while($row=mysql_fetch_array($r))
+while($row=mysqli_fetch_array($r))
 
 {
 return $row[0];
@@ -294,9 +294,9 @@ function delete_user($username)
 
 	$sql_query="SELECT * FROM register where username='".$username."'";
 
-	$r=mysql_query($sql_query);
+	$r=mysqli_query($sql_query);
 
-	if(mysql_num_rows($r)==1)
+	if(mysqli_num_rows($r)==1)
 
 	{
 
@@ -304,7 +304,7 @@ function delete_user($username)
 
 		$sql_query1="DELETE FROM admin where username='".$username."'";
 
-		mysql_query($sql_query1);
+		mysqli_query($sql_query1);
 
 		echo "<p>".$username." deleted</p>";
 
@@ -330,8 +330,8 @@ $_SESSION['username'] = $username;
 
 }
 $query2 = "select username from register where fb_id = '".$username."'";
-$result2 =mysql_query($query2);
-if($row2 = mysql_fetch_array($result2))
+$result2 =mysqli_query($query2);
+if($row2 = mysqli_fetch_array($result2))
 	$username = $row2['username'];
 
 $con=connect();
@@ -340,7 +340,7 @@ $answer=md5($answer);
 $sql_query="INSERT INTO activity_log (sno, username, levelplayed, answer, status, timestamp) VALUES (NULL, '$username', '$level', '$answer', '$status', CURRENT_TIMESTAMP)";
 
 //echo $sql_query;
-$r=mysql_query($sql_query);
+$r=mysqli_query($sql_query);
 
 }
 
@@ -586,11 +586,11 @@ $username=cleandata($username);
 
 	//$password=Secure::encrypt_value($password,$username);
 
-$r=mysql_query($sql_query);
+$r=mysqli_query($sql_query);
 
 $i=0;
 
-while($row=mysql_fetch_array($r))
+while($row=mysqli_fetch_array($r))
 
 {
 
@@ -652,10 +652,10 @@ function logged_in() {
 		$userid=extract_username();
 		$sql_query="SELECT fb_id FROM register where fb_id = '$userid'";
 
-		$r=mysql_query($sql_query);
+		$r=mysqli_query($sql_query);
 
 
-		if(mysql_num_rows($r)==1) {
+		if(mysqli_num_rows($r)==1) {
 
 
 			return true;
@@ -767,7 +767,7 @@ $sql_query="update register set level =".$level." WHERE username='".$username."'
 
 //echo $sql_query;
 
-mysql_query($sql_query);
+mysqli_query($sql_query);
 
 
 
@@ -837,11 +837,11 @@ $sql_query="select page from levelans , register where levelans.number=register.
 
 
 
-$r=mysql_query($sql_query);
+$r=mysqli_query($sql_query);
 
 $page="notfound.php";
 
-if($row=mysql_fetch_array($r))
+if($row=mysqli_fetch_array($r))
 
 {
 
@@ -867,7 +867,7 @@ $level=cleandata($level);
 
 $sql_query="update register set level=(select gotolevel from levelans where number=$level) where username='".$username."'";
 
-mysql_query($sql_query);
+mysqli_query($sql_query);
 
 }
 
@@ -885,9 +885,9 @@ $sql_query="select page from levelans where number=(select gotolevel from levela
 
 $page="notfound.php";
 
-$r=mysql_query($sql_query);
+$r=mysqli_query($sql_query);
 
-while($row=mysql_fetch_array($r))
+while($row=mysqli_fetch_array($r))
 
 {
 
@@ -915,7 +915,7 @@ $sql_query="update register set level=(select gotolevel from levelans where numb
 
 //echo $sql_query;
 
-mysql_query($sql_query);
+mysqli_query($sql_query);
 
 
 
@@ -937,9 +937,9 @@ $sql_query="select  explanation from levelans where number=$level";
 
 $exp="";
 
-$r=mysql_query($sql_query);
+$r=mysqli_query($sql_query);
 
-while($row=mysql_fetch_array($r))
+while($row=mysqli_fetch_array($r))
 
 {
 
@@ -969,9 +969,9 @@ $sql_query="select number from levelans where page='$page'";
 
 
 
-$r=mysql_query($sql_query);
+$r=mysqli_query($sql_query);
 
-while($row=mysql_fetch_array($r))
+while($row=mysqli_fetch_array($r))
 
 {
 
