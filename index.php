@@ -93,7 +93,7 @@ if (!isset($_SESSION["email"])){
 'use strict';
 
     $("#ls").click(function() {
-      alert("You have clicked Levelskip Lifeline ");
+      //alert("You have clicked Levelskip Lifeline ");
         var levelname = "levelskip";
 
         $.post( "zqlifeline.php", { name: levelname } ,
@@ -132,7 +132,7 @@ if (!isset($_SESSION["email"])){
     });
 
   $("#fl").click(function() {
-    alert("You have clicked on  First-last Lifeline");
+    //alert("You have clicked on  First-last Lifeline");
      var levelname = "firstlast";
        $.post( "zqlifeline.php", { name: levelname } ,
           function( data ) {
@@ -169,7 +169,7 @@ if (!isset($_SESSION["email"])){
 });
 
   $("#al").click(function() {
-    alert("You have clicked on anslen lifeline");
+   // alert("You have clicked on anslen lifeline");
     var levelname = "anslen";
 
         $.post( "zqlifeline.php", { name: levelname } ,
