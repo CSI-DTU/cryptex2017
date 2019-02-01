@@ -12,10 +12,10 @@ if (!isset($_SESSION["access_token"]) && !logged_in()) {
   //add_user();
   header('Location: '.LOGINLINK);
 }
-if (!isset($_SESSION['fb_id'])) {
+if (!isset($_SESSION['userID'])) {
   header('Location: '.LOGINLINK);
 }
-if (empty($_SESSION['fb_id'])) {
+if (empty($_SESSION['userID'])) {
   header('Location: '.LOGINLINK);
 }
 
@@ -51,7 +51,7 @@ if (!isset($_SESSION["email"])){
      <!-- Open Graph Data -->
     <meta property="og:title" content="Cryptex 2019"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://cryptex19.ml"/>
+    <meta property="og:url" content="<?php echo REDIRECTLINK; ?>"/>
     <meta property="og:image" content="https://i.ytimg.com/vi/M9a6pmK-0EY/maxresdefault.jpg"/>
     <meta property="og:site_name" content="Cryptex 2019"/>
     <meta property="og:description" content="Play a game of thinking!"/>
