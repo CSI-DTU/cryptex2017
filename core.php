@@ -1,10 +1,10 @@
 <?php
 define("DBHOST",        "localhost");
 define("DBUSER",        "root");
-define("DBPASSWORD",    "cryptex2k19");
+define("DBPASSWORD",    "abcd1234");
 define("DBNAME",        "cryptex");
-define("FBAPPID",       "565461693784792");
-define("FBAPPSECRET",   "c89075376defb090dd796342027a614f");
+define("FBAPPID",       "");
+define("FBAPPSECRET",   "");
 
 define("REDIRECTLINK",  "http://cryptex19.ml");
 define("LOGINLINK",     "http://cryptex19.ml/vide/examples/login.php");
