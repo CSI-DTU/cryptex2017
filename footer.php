@@ -18,7 +18,7 @@
   </div>
   <div class="mdl-mega-footer--bottom-section">
     <a class="android-link mdl-typography--font-light" target="_blank" href=<?php echo DTUSITE ;?>>Visit CSI DTU Site</a>
-    <a class="android-link mdl-typography--font-light" target="_blank" href=<?php echo COGENESISSITE; ?> >Visit Invictus Page</a>
+    <a class="android-link mdl-typography--font-light" target="_blank" href=<?php echo FESTSITE; ?> >Visit Invictus Page</a>
     <a class="android-link mdl-typography--font-light" href="webteam.php">View Team</a>
   </div>
 </footer>

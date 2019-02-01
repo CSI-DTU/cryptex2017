@@ -75,7 +75,7 @@ if (!isset($_SESSION["email"])){
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK; ?> >Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK; ?> >Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK; ?> >FB Forum</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
