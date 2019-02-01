@@ -87,7 +87,7 @@
             <center>
               <div  
                 class="fb-login-button" 
-                scope="public_profile,email,user_friends" 
+                scope="public_profile,email" 
                 data-size="large" 
                 data-button-type="login_with" 
                 data-auto-logout-link="false" 
