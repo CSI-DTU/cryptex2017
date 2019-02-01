@@ -90,7 +90,7 @@
                 scope="public_profile,email,user_friends" 
                 data-size="large" 
                 data-button-type="login_with" 
-                data-auto-logout-link="true" 
+                data-auto-logout-link="false" 
                 data-use-continue-as="false"
                 onlogin="checkLoginStatus();"
               ></div>
