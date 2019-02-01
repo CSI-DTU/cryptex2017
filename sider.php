@@ -1,34 +1,31 @@
 <div class="android-drawer mdl-layout__drawer ">
-         <header class="demo-drawer-header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-          <img src="
-          <?php
+  <header class="demo-drawer-header mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    <img 
+      src="
+      <?php
+        if(isset($_SESSION['pic']) && !empty($_SESSION['pic'])){
+          echo $_SESSION['pic'];
+        }else{
+          echo "images/user.jpg";
+        }
+      ?>" 
+      class="demo-avatar">
+    <span>
+      <?php echo $_SESSION["name"]; ?>
+    </span>
 
-          $profilepic=$_SESSION['pic'];
+  </header>
+  <nav class="mdl-navigation">
+    <a class="mdl-navigation__link" href="index.php">Home</a>
+    <a class="mdl-navigation__link" href="leaderboard.php#me">LeaderBoard</a>
+    <a class="mdl-navigation__link" href="rules.php">Rules</a>
 
-          echo $profilepic;
-
-          ?>" class="demo-avatar">
-          <span>
-          <?php
-
-
-          echo $_SESSION["name"];
-
-          ?>
-          </span>
-
-        </header>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="index.php">Home</a>
-          <a class="mdl-navigation__link" href="leaderboard.php">LeaderBoard</a>
-          <a class="mdl-navigation__link" href="rules.php">Rules</a>
-
-          <div class="android-drawer-separator"></div>
-          <span class="mdl-navigation__link" href="">Life Lines</span>
-          <ul>
-          <li class="mdl-navigation__link" id="ls">Level Skip</li>
-          <li class="mdl-navigation__link" id="fl">First Last</li>
-          <li class="mdl-navigation__link" id="al">Answer Length</li>
-          </ul>
-        </nav>
-      </div>
+    <div class="android-drawer-separator"></div>
+    <span class="mdl-navigation__link" href="">Life Lines</span>
+    <ul>
+      <li class="mdl-navigation__link" id="ls">Level Skip</li>
+      <li class="mdl-navigation__link" id="fl">First Last</li>
+      <li class="mdl-navigation__link" id="al">Answer Length</li>
+    </ul>
+  </nav>
+</div>

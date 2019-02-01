@@ -1,10 +1,9 @@
 <?php
-require("functions.php");
-
-error_reporting(0);
+  require("functions.php");
+  error_reporting(0);
 ?>
-<!doctype html>
 
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -45,121 +44,122 @@ error_reporting(0);
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK; ?> >Home</a>
               <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >Forum</a>
-
-
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
             <img class="android-logo-image" src="images/cryptex-small.png">
           </span>
-
         </div>
       </div>
-<?php
-  require('sider2.php');
-?>
 
+      <?php require('sider2.php'); ?>
 
       <div class="android-content mdl-layout__content">
         <a name="top"></a>
         <div class="mdl-grid">
 
+          <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet">
+            <div class="mdl-card__title">
+              <!-- <h2 class="mdl-card__title-text">Welcome</h2> -->
+                <!-- <center><font color = "red" size = "180%"> Welcome </font></center> -->
+            </div>
 
-              <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet">
-                    <div class="mdl-card__title">
-                      <!-- <h2 class="mdl-card__title-text">Welcome</h2> -->
-                       <!-- <center><font color = "red" size = "180%"> Welcome </font></center> -->
-                    </div>
+            <!--  <div class="mdl-card__supporting-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Mauris sagittis pellentesque lacus eleifend lacinia...
+            </div> -->
 
-                   <!--  <div class="mdl-card__supporting-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris sagittis pellentesque lacus eleifend lacinia...
-                    </div> -->
+            <div class="mdl-card__actions mdl-card--border">
+              <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Rules
+              </a> -->
+            </div>
 
-                    <div class="mdl-card__actions mdl-card--border">
-                      <!-- <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                        Rules
-                      </a> -->
-                    </div>
+            <!--
+            <img src="images/more-from-3.png" alt="">
+            <img src="images/more-from-4.png" alt="">
+            <img src="images/nexus6-on.jpg" alt=""> 
+            -->
 
-                  <!--
-                    <img src="images/more-from-3.png" alt="">
-                    <img src="images/more-from-4.png" alt="">
-                    <img src="images/nexus6-on.jpg" alt=""> -->
+            <div id="contents">
+              <br/>
+              <center><font color = "red" size = "180%"> Rules </font></center>
+              </br></br>
 
-                    <div id="contents">
-          <br/>
-          <center><font color = "red" size = "180%"> Rules </font></center>
-          </br></br>
+              <p style = "margin-left:20px;">
+                The game consists of <span id = "num"><?php echo maxlevel()+1; ?></span>
+                levels in total. Each level presents you with a “code” and a set of clues.
+                You need to crack that code using those clues to get to the next level.
+                The hints,if present, may or may not be hidden at any level. Look for them in url,
+                page title, page source, image etc. All you need is your common sense coupled with
+                observation and understanding skills.</br></br>
+                The hints may deceive if looked alone but collectively they will point to a definite answer.</br></br>
+                You have no limit to the number of attempts for answering a particular level. Try out each and every possibility you can think of to get to the next level.
+              </p>
+              </br>
+              <center><font color = "red" size = "150%">Note</font></center>
+              <p style = "margin-left:20px;">
+              <ol>
+               <li> Only students studying in <b>Indian Universities</b> are eligible to claim prize.</li>
+               <li> You have to provide id to claim prize. </li>
+               <li> You should use your real name. </li>
+               <li> You will be <font color = "red">disqualified</font>, if found fake. </li>
+              </ol>
+              </p>
+              </br>
+              <center><font color = "red" size = "150%"> Life-Lines And Hints </font></center>   
+              </br>
+              <p style = "margin-left:20px;">
+                There are <span id = "num">3 </span> lifelines that are available <strong><font color = "red">from level 0 till level <?php echo maxlevel(); ?> </font></strong> for your help :- <br/>
+                <span id = "num">1</span>.Level-Skip : This life-line will help you to skip any level of your choice <b>ONCE</b>.   <br/><br/>
+                <span id = "num">2</span>.First-Last : This life-line will let you to know the first and last alphabets of answer of any <b>SINGLE</b> level of your choice.   <br/><br/>
+                <span id = "num">3</span>.Answer-Length : This life-line will let you to know the Length of answer of any <b>SINGLE</b> level of your choice. NOTE THAT NO SPECIAL CHARACTERS WILL BE PRESENT ,SPACES MAY BE PRESENT.<br/><br/>
+                Note that each lifeline can be used ONLY ONCE...so use wisely..!</br>
 
-          <p style = "margin-left:20px;"> The game consists of <span id = "num">20+</span>
-          levels in total. Each level presents you with a “code” and a set of clues.
-          You need to crack that code using those clues to get to the next level.
-          The hints,if present, may or may not be hidden at any level. Look for them in url,
-          page title, page source, image etc. All you need is your common sense coupled with
-          observation and understanding skills.</br></br>
-          The hints may deceive if looked alone but collectively they will point to a definite answer.</br></br>
-          You have no limit to the number of attempts for answering a particular level. Try out each and every possibility you can think of to get to the next level.</br></br>
-          <center><font color = "red" size = "150%"> Life-Lines And Hints </font></center></p></br></br>
-          <p style = "margin-left:20px;">
-          There are <span id = "num">3 </span> lifelines that are available <strong><font color = "red">from level 0 till level 26 </font></strong> for your help :- <br/>
-          <span id = "num">1</span>.Level-Skip : This life-line will help you to skip any level of your choice <b>ONCE</b>.   <br/><br/>
-          <span id = "num">2</span>.First-Last : This life-line will let you to know the first and last alphabets of answer of any <b>SINGLE</b> level of your choice.   <br/><br/>
-          <span id = "num">3</span>.Answer-Length : This life-line will let you to know the Length of answer of any <b>SINGLE</b> level of your choice. NOTE THAT NO SPECIAL CHARACTERS WILL BE PRESENT ,SPACES MAY BE PRESENT.<br/><br/>
-          Note that each lifeline can be used ONLY ONCE...so use wisely..!</br>
+                Hints will be available in the <u>
+                <a href=<?php echo APPLINK; ?> target="_blank">Discussion Forum</a></u>
+                on a timely basis from the mods. <br>Users can also post the hints for others to keep the game
+                going but anyone disclosing the answer will be <font color = "red">disqualified</font>
+                from the game.
+              </p>
+              </br></br>
+            </div>
 
-          Hints will be available in the <u>
-          <a href=<?php echo APPLINK; ?> target="_blank">Discussion Forum</a></u>
-          on a timely basis from the mods. <br>Users can also post the hints for others to keep the game
-          going but anyone disclosing the answer will be <font color = "red">disqualified</font>
-          from the game.
-          </p>
-          </br></br>
+          </div>
+          <!--  <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell-middle mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet">
+                <div class="mdl-card__title">
+                  <h2 class="mdl-card__title-text text-center">Answer</h2>
+                </div>
+                <div class="mdl-grid">
+                  <div class="mdl-cell-middle mdl-cell--6-col mdl-cell--3-offset-desktop mdl-cell--3-offset-tablet">
+                      <form action="#">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <input class="mdl-textfield__input" type="text" id="sample3">
+                          <label class="mdl-textfield__label" for="sample3">Text...</label>
+                        </div>
+
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                        <i class="material-icons right">send</i>
+                        </button>
+                      </form>
+                  </div>
+                </div>
+          </div> -->
         </div>
 
-              </div>
-
-              <!--  <div class="demo-card-wide mdl-card mdl-shadow--2dp mdl-cell-middle mdl-cell--10-col mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet">
-                    <div class="mdl-card__title">
-                      <h2 class="mdl-card__title-text text-center">Answer</h2>
-                    </div>
-                    <div class="mdl-grid">
-                      <div class="mdl-cell-middle mdl-cell--6-col mdl-cell--3-offset-desktop mdl-cell--3-offset-tablet">
-                         <form action="#">
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" id="sample3">
-                              <label class="mdl-textfield__label" for="sample3">Text...</label>
-                            </div>
-
-                            <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-                            <i class="material-icons right">send</i>
-                            </button>
-                          </form>
-                      </div>
-                    </div>
-                </div> -->
-
-
-         </div>
-
-<?php
-
-    require("footer.php");
-
- ?>
+        <?php require("footer.php");?>
       </div>
     </div>
 
     <script src="js/material.js"></script>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-80262297-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
+      ga('create', 'UA-80262297-2', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
