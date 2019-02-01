@@ -47,7 +47,7 @@ if (!isset($_SESSION["email"])){
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/material.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
      <!-- Open Graph Data -->
     <meta property="og:title" content="Cryptex 2019"/>
     <meta property="og:type" content="website"/>
