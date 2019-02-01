@@ -12,10 +12,10 @@ if (!isset($_SESSION["access_token"]) && !logged_in()) {
   //add_user();
   header('Location: '.LOGINLINK);
 }
-if (!isset($_SESSION['fb_id'])) {
+if (!isset($_SESSION['userID'])) {
   header('Location: '.LOGINLINK);
 }
-if (empty($_SESSION['fb_id'])) {
+if (empty($_SESSION['userID'])) {
   header('Location: '.LOGINLINK);
 }
 
