@@ -56,7 +56,7 @@ if (!isset($_SESSION["email"])) {
                                     <!-- Options btn color: .btn-success | .btn-info | .btn-warning | .btn-danger | .btn-primary -->
                                     <div class="title__action"><a href="../leaderboard.php#me" class="btn btn-success">Leaderboard</a></div>
                                     </br>
-                                    <div class="title__action"><a href="<?php echo APPLINK; ?>" class="btn btn-success">FB Forum</a></div>
+                                    <div class="title__action"><a href="<?php echo APPLINK; ?>" target="_blank" class="btn btn-success">FB Forum</a></div>
                                 </div> <!-- .title-01 -->
                             </div>
                         </div>
