@@ -99,7 +99,7 @@ if (!isset($_SESSION["email"])){
                 if(data === c  ){
                   $.post( "zqgetlifeline.php", { name: levelname } ,
                     function( data ) {
-                      console.log(data);
+                     // console.log(data);
                         //  $("#reshu").html=data;
                           location.reload();
                       //    window.location.href = "http://localhost/downloadedcryptexsite/index.php";
@@ -125,8 +125,8 @@ if (!isset($_SESSION["email"])){
               if(data === c  ){
                 $.post( "zqgetlifeline.php", { name: levelname } ,
                   function( datas ) {
-                    console.log(datas);
-                    window.alert(datas);
+                    // console.log(datas);
+                    // window.alert(datas);
                     var stringq = "First and Last Lifeline: The First and Last Letters of your answer are ";
                     stringq = stringq.concat(datas.charAt(0));
                     stringq = stringq.concat(" and ");

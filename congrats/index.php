@@ -8,14 +8,19 @@ if (!isset($_SESSION["access_token"])) {
 
 if (!isset($_SESSION["email"])) {
   add_user();
+} 
+$level=(int)getlevel($_SESSION["fb_id"]);
+if($level <= maxlevel()){
+  header('Location: '.REDIRECTLINK);
 }
-
+     
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Congrats</title>
-        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="../images/cry.png">
+	<meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&amp;subset=latin-ext" rel="stylesheet">
