@@ -750,7 +750,7 @@ _:-ms-input-placeholder, :root .demo-graph {
 .demo-card-image3.mdl-card {
   width: 280px;
   height: 280px;
-  background: url('images/aryan.gif') ;
+  background: url('../images/aryan.gif') ;
 }
 
 .demo-card-image3 > .mdl-card__actions {
