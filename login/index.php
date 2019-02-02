@@ -107,7 +107,6 @@
             <?php 
           } 
         ?>
-	<center><h2><span>Wishing &#x1F382Happy Birthday&#x1F382 to the developer - <a href="https://github.com/zephyr007" target="_blank">Nitin Dhemiwal</a></span></h2></center>
         <!--<div id="defaultCountdown"></div>-->
         <p class="copyright">Proudly designed by <a href= "<?php echo DTUSITE; ?>" target="_blank">CSI-DTU</a></p>
       </div>
