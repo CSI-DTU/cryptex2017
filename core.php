@@ -1,15 +1,17 @@
 <?php
 define("DBHOST",        "localhost");
 define("DBUSER",        "root");
-define("DBPASSWORD",    "abcd1234");
+define("DBPASSWORD",    "");
 define("DBNAME",        "cryptex");
 define("FBAPPID",       "");
 define("FBAPPSECRET",   "");
 
-define("REDIRECTLINK",  "http://cryptex19.ml");
-define("LOGINLINK",     "http://cryptex19.ml/vide/examples/login.php");
-define("APPLINK",       "http://www.facebook.com/dtu.csi");
-define("DTUSITE",       "http://csidtu.ml/");
-define("COGENESISSITE", "http://invictusdtu.org/");
+define("REDIRECTLINK",  "https://cryptex19.ml");
+define("LOGINLINK",     "https://cryptex19.ml/login");
+define("APPLINK",       "https://www.facebook.com/dtu.csi");
+define("DTUSITE",       "https://csidtu.ml/");
+define("FESTSITE", 	"https://invictusdtu.org/");
+
+define("LAUNCH",	mktime(14,30,0,2,3,2019));
 
 ?>

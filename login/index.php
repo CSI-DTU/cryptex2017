@@ -28,6 +28,9 @@
 	</head>
 
 	<body>
+		<?php
+			if(time() >= LAUNCH){
+		?>
     <!-- Facebook API -->
     <script>
       function statusChangeCallback(response){
@@ -67,7 +70,9 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
     <!-- /Facebook API -->
-
+		<?php 
+			}
+		?>
     <!--DARK OVERLAY-->
     <div class="overlay"></div>
     <!--/DARK OVERLAY-->
@@ -78,7 +83,7 @@
       <div class="container">
         <img src="images/logo.png" alt="Csi-dtu" class="image-align" />
         <h1>
-          <span>Present`s</span><br/>
+          <span>Presents</span><br/>
           <span class="yellow">CRYPTEX 2019</span>
         </h1>
         <?php 
@@ -102,8 +107,9 @@
             <?php 
           } 
         ?>
+	<center><h2><span>Wishing &#x1F382Happy Birthday&#x1F382 to the developer - <a href="https://github.com/zephyr007" target="_blank">Nitin Dhemiwal</a></span></h2></center>
         <!--<div id="defaultCountdown"></div>-->
-        <p class="copyright">Proudly designed by <a target="_blank">CSI-DTU</a></p>
+        <p class="copyright">Proudly designed by <a href= "<?php echo DTUSITE; ?>" target="_blank">CSI-DTU</a></p>
       </div>
       <!--/CONTAINER-->
     </div>
