@@ -51,7 +51,7 @@ if($level <= maxlevel()){
                                         <!-- <span>CONGRATULATIONS</span> -->
                                         <!-- <span>CONGRAT</span> -->
                                         <strong class="hero-section__words">
-                                            <span class="title__effect is-visible">CONGRATULATIONS</span>
+                                            <span class="title__effect is-visible">CONGRATS</span>
                                             <span class="title__effect"><?php if(isset($_SESSION['name'])) echo $_SESSION['name']; else echo "Buddy" ?></span>
                                         </strong>
                                         <!-- <span>Prince Piyush</span>  -->
