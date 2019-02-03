@@ -209,9 +209,15 @@ if (!isset($_SESSION["email"])){
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">Question Number : <?php echo $row['qno'];?></h2>
             </div>
-            <div class="mdl-card__supporting-text">
-              <?php echo $row['ques'];?>
-            </div>
+            <?php 
+              if(isset($row['ques']) && !empty($row['ques'])){
+                ?>
+                  <div class="mdl-card__supporting-text">
+                    <?php echo $row['ques']; ?>
+                  </div>
+                <?php
+              }
+            ?>
             <div class="mdl-card__supporting-text" id="reshu"></div>
             <?php
               if (isset($row["image1"])) {
