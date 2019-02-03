@@ -107,6 +107,7 @@
             <?php 
           } 
         ?>
+	<p><strong><a href="../rules.php" target="_blank">Guidelines</a></strong></p>
         <!--<div id="defaultCountdown"></div>-->
         <p class="copyright">Proudly designed by <a href= "<?php echo DTUSITE; ?>" target="_blank">CSI-DTU</a></p>
       </div>
