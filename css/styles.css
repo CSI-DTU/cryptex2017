@@ -747,7 +747,7 @@ _:-ms-input-placeholder, :root .demo-graph {
   font-size: 14px;
   font-weight: 500;
 }
-.demo-card-image3.mdl-card {
+/* .demo-card-image3.mdl-card {
   width: 280px;
   height: 280px;
   background: url('../images/aryan.gif') ;
@@ -757,7 +757,7 @@ _:-ms-input-placeholder, :root .demo-graph {
   height: 52px;
   padding: 16px;
   background: rgba(0, 0, 0, 0.2);
-}
+} */
 .demo-card-image__filename {
   color: #fff;
   font-size: 14px;
