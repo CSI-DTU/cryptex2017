@@ -13,7 +13,7 @@
       </a>
     </div>
     <div class="mdl-mega-footer--center-section">
-      <center><img src="images/csilogo.png"><center>
+	<center><a href="<?php echo APPLINK; ?>" target="_blank"><img src="images/csilogo.png"></a><center>
     </div>
   </div>
   <div class="mdl-mega-footer--bottom-section">
