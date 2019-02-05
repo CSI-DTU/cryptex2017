@@ -103,7 +103,8 @@
                	<li> You have to provide id to claim prize. </li>
                	<li> You should use your real name. </li>
                	<li> You will be <font color = "red">disqualified</font>, if found fake. </li>
-              </ol>
+              	<li> </li>
+	      </ol>
 	      <p style = "margin-left:20px;">
               	If having any issues or doubts, please contact us on our <a href="<?php echo APPLINK; ?>" target="_blank">FB Forum</a> .
 	      </p>
@@ -120,8 +121,8 @@
                 Hints will be available in the <u>
                 <a href=<?php echo APPLINK; ?> target="_blank">Discussion Forum</a></u>
                 on a timely basis from the mods. <br>Users can also post the hints for others to keep the game
-                going but anyone disclosing the answer will be <font color = "red">disqualified</font>
-                from the game.
+                going but <strong>anyone disclosing the answer will be <font color = "red">disqualified</font>
+                from the game.</strong>
               </p>
               </br></br>
             </div>

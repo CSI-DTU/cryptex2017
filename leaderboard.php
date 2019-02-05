@@ -134,7 +134,12 @@ $i=0;
                       </td>
                       <td>
                         <center>
-                          <?php if($row2['1'] <= maxlevel()) echo $row2['1']; else echo "&#x272A";?>
+                          <?php if($row2['1'] < 0)
+					echo "&#x2620";
+				else if($row2['1'] <= maxlevel()) 
+					echo $row2['1']; 
+				else 
+					echo "&#x272A";?>
                         </center>
                       </td>
                       <td>
