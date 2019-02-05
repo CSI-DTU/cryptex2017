@@ -100,10 +100,10 @@
               <center><font color = "red" size = "150%">Note</font></center>
               <ol>
                	<li> Only students studying in <b>Indian Universities</b> are eligible to claim prize.</li>
-               	<li> You have to provide id to claim prize. </li>
+               	<li> You have to provide proof of identity to claim prize. </li>
                	<li> You should use your real name. </li>
                	<li> You will be <font color = "red">disqualified</font>, if found fake. </li>
-              	<li> </li>
+              	<li> Prizes will be given to top 3 only.</li>
 	      </ol>
 	      <p style = "margin-left:20px;">
               	If having any issues or doubts, please contact us on our <a href="<?php echo APPLINK; ?>" target="_blank">FB Forum</a> .
