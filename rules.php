@@ -99,6 +99,7 @@
               </br>
               <center><font color = "red" size = "150%">Note</font></center>
               <ol>
+		<li> By participating in this game, the participant(s) shall automatically agree to the following <a href="https://drive.google.com/file/d/1OCybcdQUgeclHF7oKACo3AqAUP7c501c/view?usp=drivesdk" target="_blank">Terms and Conditions</a>.</li>
                	<li> Only students studying in <b>Indian Universities</b> are eligible to claim prize.</li>
                	<li> You have to provide proof of identity to claim prize. </li>
                	<li> You should use your real name. </li>
