@@ -105,6 +105,7 @@
                	<li> You should use your real name. </li>
                	<li> You will be <font color = "red">disqualified</font>, if found fake. </li>
               	<li> Prizes will be given to top 3 only.</li>
+		<li> <strong>The leaderboard rankings as on 9th Feb 2019, 8 PM IST will be considered as final positions for Cryptex 2019.</strong></li>>
 	      </ol>
 	      <p style = "margin-left:20px;">
               	If having any issues or doubts, please contact us on our <a href="<?php echo APPLINK; ?>" target="_blank">FB Forum</a> .
