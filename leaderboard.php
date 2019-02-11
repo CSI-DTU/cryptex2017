@@ -52,7 +52,7 @@ $i=0;
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK;?>>Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >FB Forum</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
@@ -134,7 +134,12 @@ $i=0;
                       </td>
                       <td>
                         <center>
-                          <?php if($row2['1'] <= maxlevel()) echo $row2['1']; else echo "&#x272A";?>
+                          <?php if($row2['1'] < 0)
+					echo "&#x2620";
+				else if($row2['1'] <= maxlevel()) 
+					echo $row2['1']; 
+				else 
+					echo "&#x272A";?>
                         </center>
                       </td>
                       <td>

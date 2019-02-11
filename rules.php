@@ -43,7 +43,7 @@
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK; ?> >Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >FB Forum</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
@@ -87,7 +87,7 @@
               </br></br>
 
               <p style = "margin-left:20px;">
-                The game consists of <span id = "num"><?php echo maxlevel()+1; ?></span>
+                The game consists of <span id = "num"><?php echo maxlevel()+1; ?></span>+
                 levels in total. Each level presents you with a “code” and a set of clues.
                 You need to crack that code using those clues to get to the next level.
                 The hints,if present, may or may not be hidden at any level. Look for them in url,
@@ -98,29 +98,33 @@
               </p>
               </br>
               <center><font color = "red" size = "150%">Note</font></center>
-              <p style = "margin-left:20px;">
               <ol>
-               <li> Only students studying in <b>Indian Universities</b> are eligible to claim prize.</li>
-               <li> You have to provide id to claim prize. </li>
-               <li> You should use your real name. </li>
-               <li> You will be <font color = "red">disqualified</font>, if found fake. </li>
-              </ol>
-              </p>
+		<li> By participating in this game, the participant(s) shall automatically agree to the following <a href="https://drive.google.com/file/d/1OCybcdQUgeclHF7oKACo3AqAUP7c501c/view?usp=drivesdk" target="_blank">Terms and Conditions</a>.</li>
+               	<li> Only students studying in <b>Indian Universities</b> are eligible to claim prize.</li>
+               	<li> You have to provide proof of identity to claim prize. </li>
+               	<li> You should use your real name. </li>
+               	<li> You will be <font color = "red">disqualified</font>, if found fake. </li>
+              	<li> Prizes will be given to top 3 only.</li>
+		<li> <strong>The leaderboard rankings as on 9th Feb 2019, 8 PM IST will be considered as final positions for Cryptex 2019.</strong></li>
+	      </ol>
+	      <p style = "margin-left:20px;">
+              	If having any issues or doubts, please contact us on our <a href="<?php echo APPLINK; ?>" target="_blank">FB Forum</a> .
+	      </p>
               </br>
               <center><font color = "red" size = "150%"> Life-Lines And Hints </font></center>   
               </br>
               <p style = "margin-left:20px;">
-                There are <span id = "num">3 </span> lifelines that are available <strong><font color = "red">from level 0 till level <?php echo maxlevel(); ?> </font></strong> for your help :- <br/>
-                <span id = "num">1</span>.Level-Skip : This life-line will help you to skip any level of your choice <b>ONCE</b>.   <br/><br/>
-                <span id = "num">2</span>.First-Last : This life-line will let you to know the first and last alphabets of answer of any <b>SINGLE</b> level of your choice.   <br/><br/>
-                <span id = "num">3</span>.Answer-Length : This life-line will let you to know the Length of answer of any <b>SINGLE</b> level of your choice. NOTE THAT NO SPECIAL CHARACTERS WILL BE PRESENT ,SPACES MAY BE PRESENT.<br/><br/>
-                Note that each lifeline can be used ONLY ONCE...so use wisely..!</br>
+                There are <span id = "num">3 </span> lifelines that are available <strong><font color = "red">from level 0 till level <?php echo maxlevel(); ?>+ </font></strong> for your help :- <br/></br>
+                <span id = "num">1</span>.Level-Skip : This life-line will help you to skip any level of your choice <b>ONCE</b>.   <br/>
+                <span id = "num">2</span>.First-Last : This life-line will let you to know the first and last alphabets of answer of any <b>SINGLE</b> level of your choice.   <br/>
+                <span id = "num">3</span>.Answer-Length : This life-line will let you to know the Length of answer of any <b>SINGLE</b> level of your choice.<br/></br>
+                Note that each lifeline can be used ONLY ONCE...so use wisely..!</br></br>
 
                 Hints will be available in the <u>
                 <a href=<?php echo APPLINK; ?> target="_blank">Discussion Forum</a></u>
                 on a timely basis from the mods. <br>Users can also post the hints for others to keep the game
-                going but anyone disclosing the answer will be <font color = "red">disqualified</font>
-                from the game.
+                going but <strong>anyone disclosing the answer will be <font color = "red">disqualified</font>
+                from the game.</strong>
               </p>
               </br></br>
             </div>

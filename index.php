@@ -12,10 +12,10 @@ if (!isset($_SESSION["access_token"]) && !logged_in()) {
   //add_user();
   header('Location: '.LOGINLINK);
 }
-if (!isset($_SESSION['fb_id'])) {
+if (!isset($_SESSION['userID'])) {
   header('Location: '.LOGINLINK);
 }
-if (empty($_SESSION['fb_id'])) {
+if (empty($_SESSION['userID'])) {
   header('Location: '.LOGINLINK);
 }
 
@@ -47,11 +47,11 @@ if (!isset($_SESSION["email"])){
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/material.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
      <!-- Open Graph Data -->
     <meta property="og:title" content="Cryptex 2019"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="http://cryptex.ml"/>
+    <meta property="og:url" content="<?php echo REDIRECTLINK; ?>"/>
     <meta property="og:image" content="https://i.ytimg.com/vi/M9a6pmK-0EY/maxresdefault.jpg"/>
     <meta property="og:site_name" content="Cryptex 2019"/>
     <meta property="og:description" content="Play a game of thinking!"/>
@@ -75,7 +75,7 @@ if (!isset($_SESSION["email"])){
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK; ?> >Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK; ?> >Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK; ?> >FB Forum</a>
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
@@ -99,7 +99,7 @@ if (!isset($_SESSION["email"])){
                 if(data === c  ){
                   $.post( "zqgetlifeline.php", { name: levelname } ,
                     function( data ) {
-                      console.log(data);
+                     // console.log(data);
                         //  $("#reshu").html=data;
                           location.reload();
                       //    window.location.href = "http://localhost/downloadedcryptexsite/index.php";
@@ -125,8 +125,8 @@ if (!isset($_SESSION["email"])){
               if(data === c  ){
                 $.post( "zqgetlifeline.php", { name: levelname } ,
                   function( datas ) {
-                    console.log(datas);
-                    window.alert(datas);
+                    // console.log(datas);
+                    // window.alert(datas);
                     var stringq = "First and Last Lifeline: The First and Last Letters of your answer are ";
                     stringq = stringq.concat(datas.charAt(0));
                     stringq = stringq.concat(" and ");
@@ -209,9 +209,15 @@ if (!isset($_SESSION["email"])){
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">Question Number : <?php echo $row['qno'];?></h2>
             </div>
-            <div class="mdl-card__supporting-text">
-              <?php echo $row['ques'];?>
-            </div>
+            <?php 
+              if(isset($row['ques']) && !empty($row['ques'])){
+                ?>
+                  <div class="mdl-card__supporting-text">
+                    <?php echo $row['ques']; ?>
+                  </div>
+                <?php
+              }
+            ?>
             <div class="mdl-card__supporting-text" id="reshu"></div>
             <?php
               if (isset($row["image1"])) {
