@@ -1,25 +1,17 @@
 <?php
+  //session_start();
+  require_once("core.php");
+  require("functions.php");
 
+  if (!isset($_SESSION["access_token"])) {
+    header('Location: '.LOGINLINK);
+  }
 
- //session_start();
-require_once("core.php");
-require("functions.php");
+  if (!isset($_SESSION["email"])) {
+    add_user();
 
-if (!isset($_SESSION["access_token"])) {
-  header('Location: '.LOGINLINK);
-}
+  }
+  $life = $_POST["name"];
 
-
-if (!isset($_SESSION["email"])) {
-  add_user();
-
-}
-$life = $_POST["name"];
-
-echo getLifeline($life);
-
-
-
-
-
+  echo getLifeline($life);
 ?>

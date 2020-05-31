@@ -1,20 +1,18 @@
 <?php
-session_start();
+  include 'core.php';
+  session_start();
 
-error_reporting(0);
-require("functions.php");
+  error_reporting(0);
+  require("functions.php");
 
-if (!isset($_SESSION["email"])) {
-  header('Location: http://localhost:5000/vide/examples/fb.php ');
-}
-else{
-  //scheckaccesstoken();
-}
-
-if (!isset($_SESSION["email"])) {
-  add_user();
-}
-
+  if (!isset($_SESSION["access_token"])) {
+    header('Location: '.LOGINLINK);
+  }
+  
+  if (!isset($_SESSION["email"])) {
+    add_user();
+  }
+  
 ?>
 
 <!doctype html>
@@ -33,9 +31,9 @@ if (!isset($_SESSION["email"])) {
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/material.css">
     <link rel="stylesheet" href="css/styles.css">
-    <style>
+    <!-- <style>
 
-    </style>
+    </style> -->
   </head>
   <body>
     <div class="mdl-layout mdl-js-layout  mdl-layout--fixed-drawer mdl-layout--fixed-header">
@@ -52,77 +50,68 @@ if (!isset($_SESSION["email"])) {
           <div class="android-navigation-container">
             <nav class="android-navigation mdl-navigation">
               <a class="mdl-navigation__link mdl-typography--text-uppercase" href=<?php echo REDIRECTLINK; ?> >Home</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >Forum</a>
+              <a class="mdl-navigation__link mdl-typography--text-uppercase" target="_blank" href=<?php echo APPLINK;?> >FB Forum</a>
 
             </nav>
           </div>
           <span class="android-mobile-title mdl-layout-title">
             <img class="android-logo-image" src="images/cryptex-small.png">
           </span>
-
-
         </div>
       </div>
-<?php
-  require('sider2.php');
-?>
+      
+      <?php require('sider2.php'); ?>
 
+      <div class="android-content mdl-layout__content">
+        <a name="top"></a>
+        
+        <div class="android-customized-section-text">
+          <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Web Development Team</div>
+        </div>
+        <div class="mdl-cell mdl-cell--11-col mdl-cell--12-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-table">
+          <div class="mdl-grid">
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-grid">
+              <div class="demo-card-image1 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--10-col-phone">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__actions">
+                  <span class="demo-card-image__filename">Prince Piyush</span>
+                </div>
+              </div>
+              <div class="demo-card-image2 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--10-col-phone">
+                <div class="mdl-card__title mdl-card--expand"></div>
+                <div class="mdl-card__actions">
+                  <span class="demo-card-image__filename">Nitin Dhemiwal</span>
+                </div>
+              </div>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-layout-spacer"></div>
+          </div>
+        </div>
+          <!--     <div class="android-customized-section-text">
+                  <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Content Team</div>
+                    <h5 style="text-align: center;">Kushagra Jain</h5>
+                  <h5 style="text-align: center;">Sachin Kadyan</h5>
+                  <h5 style="text-align: center;">Shubham Jana</h5>
 
-           <div class="android-content mdl-layout__content">
-                  <a name="top"></a>
-                  <div class="mdl-grid">
+              </div>
+          -->
 
-                          <div class="android-customized-section-text">
-                              <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Web Development Team</div>
-                          </div>
-
-
-                    <div class="mdl-cell mdl-cell--11-col mdl-cell--12-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-table">
-
-                              <div class="demo-card-image1 mdl-card mdl-shadow--2dp mdl-cell mdl-cell--6-col mdl-cell--10-col-phone">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-                                  <span class="demo-card-image__filename">Harsh Kumar</span>
-                                </div>
-                              </div>
-
-
-                            </div>
-                      </div>
-
-
-                          <div class="android-customized-section-text">
-                              <div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">Content Team</div>
-                               <h5 style="text-align: center;">Kushagra Jain</h5>
-                              <h5 style="text-align: center;">Sachin Kadyan</h5>
-                              <h5 style="text-align: center;">Shubham Jana</h5>
-
-                          </div>
-
-
-
-
-
-                  </div>
-
- <?php
-
-    require("footer.php");
-
- ?>
-           </div><!-- android layout content end here -->
+        <?php require("footer.php"); ?>
+      </div><!-- android layout content end here -->
     </div>
 
     <script src="js/material.js"></script>
     <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-80262297-2', 'auto');
-  ga('send', 'pageview');
+      ga('create', 'UA-80262297-2', 'auto');
+      ga('send', 'pageview');
 
-</script>
+    </script>
   </body>
 </html>

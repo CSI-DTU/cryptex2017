@@ -1,11 +1,17 @@
 <?php
-define("DBHOST",     "localhost");
-define("DBUSER",     "root");
-define("DBPASSWORD",    "Prince2398");
-define("DBNAME",     "cryptex17");
-define("REDIRECTLINK", "http://localhost/cryptex2017");
-define("LOGINLINK",REDIRECTLINK."/vide/examples/fb.php");
-define("APPLINK","https://www.facebook.com/cryptex2017/app/202980683107053/");
-define("DTUSITE", "http://csidtu.tech/");
-define("COGENESISSITE", "http://cogenesis.dtu.ac.in/");
+define("DBHOST",        "localhost");
+define("DBUSER",        "root");
+define("DBPASSWORD",    "");
+define("DBNAME",        "cryptex");
+define("FBAPPID",       "");
+define("FBAPPSECRET",   "");
+
+define("REDIRECTLINK",  "https://cryptex19.ml");
+define("LOGINLINK",     "https://cryptex19.ml/login");
+define("APPLINK",       "https://www.facebook.com/dtu.csi");
+define("DTUSITE",       "https://csidtu.ml/");
+define("FESTSITE", 	"https://invictusdtu.org/");
+
+define("LAUNCH",	mktime(14,30,0,2,3,2019));
+
 ?>
